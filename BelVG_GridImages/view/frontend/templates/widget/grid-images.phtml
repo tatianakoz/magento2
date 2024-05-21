@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \BelVG\GridImages\Block\Widget\Grid $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$imageText = $escaper->escapeHtml($block->getImageText());
+$imageWidth = $escaper->escapeHtml($block->getImageWidth());
+$imageHeight = $escaper->escapeHtml($block->getImageHeight());
+?>
+<div class="grid-images-widget">
+        <div class="grid-images-widget__item">
+            <?php for ($i = 1; $i <= 6; $i++): ?>
+                <img src="https://placehold.co/<?=$block->getData('img_width');?>"
+                    alt=<?= $imageText ?>
+                    title=<?= $imageText ?>
+                    class="grid-images-widget__image"
+                    width=<?= $imageWidth ?>
+                    height=<?= $imageHeight ?>>
+            <?php endfor;?>
+        </div>
+</div>

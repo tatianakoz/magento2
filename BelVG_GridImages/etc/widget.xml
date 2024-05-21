@@ -1,0 +1,20 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="BelVG\GridImages\Block\Widget\Grid" id="belvg_gridimages_widget">
+        <label translate="true">Grid Images Widget</label>
+        <description translate="true">Displays a grid of images</description>
+        <parameters>
+            <parameter name="image_width" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>Image Width</label>
+                <value>400</value>
+            </parameter>
+            <parameter name="image_height" xsi:type="text" required="true" visible="true" sort_order="20">
+                <label>Image Height</label>
+                <value>400</value>
+            </parameter>
+            <parameter name="image_text" xsi:type="text" required="true" visible="true" sort_order="30">
+                <label>Image Text</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

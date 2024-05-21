@@ -1,0 +1,32 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .grid-images-widget {
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__image {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .grid-images-widget {
+        &__item {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
